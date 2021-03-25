@@ -1,26 +1,18 @@
-#include<iostream> 
+#include<iostream>
 using namespace std;
-
-int main()
-{    
-    long int num;
-    int sum = 0, rem;
-    cin>>num;   
-
-    while(num / 10 != 0)
-    {
-        sum = 0;
-        while(num != 0) 
-        {
-            rem = num % 10;  
-            sum += rem;      
-            num = num / 10;  
-        }
-
-        num = sum;
+int main(){
+    int n,sum=0,rem;
+    cout<<"Enter the number:"<<endl;
+    cin>>n;
+    while(n>9){
+        sum=0;
+    while(n>0){
+        rem=n%10;
+        sum=sum+rem;
+        n=n/10;
     }
-
-   cout<<sum;
-
+        n=sum;
+    }
+    cout<<sum;
     return 0;
 }
